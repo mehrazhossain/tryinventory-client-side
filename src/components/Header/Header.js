@@ -1,12 +1,12 @@
 import React from 'react';
 import { Fragment } from 'react';
 import { Disclosure, Menu, Transition } from '@headlessui/react';
-import { BellIcon, MenuIcon, XIcon } from '@heroicons/react/outline';
+import { MenuIcon, XIcon } from '@heroicons/react/outline';
 
 const navigation = [
   { name: 'Dashboard', href: '#', current: true },
   { name: 'Manage Inventory', href: '#', current: false },
-  { name: 'Blog', href: '#', current: false },
+  { name: 'Blogs', href: '#', current: false },
 ];
 
 function classNames(...classes) {
