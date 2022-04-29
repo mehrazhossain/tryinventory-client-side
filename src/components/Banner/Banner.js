@@ -14,7 +14,7 @@ const Banner = () => {
             </div>
             <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none">
               Product Inventory
-              <br className="hidden md:block" />
+              <br className="hidden md:block" />{' '}
               <span className="inline-block text-purple-600">Management</span>
             </h2>
             <p className="text-base text-gray-700 md:text-lg">

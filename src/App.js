@@ -13,8 +13,15 @@ function App() {
     <div>
       <Header></Header>
       <Routes>
-        <Route path="/" element={<Banner></Banner>}></Route>
-        <Route path="/" element={<Product> </Product>}></Route>
+        <Route
+          path="/"
+          element={
+            <>
+              <Banner></Banner>
+              <Product></Product>
+            </>
+          }
+        ></Route>
         <Route
           path="/manage-inventory"
           element={<ManageInventory> </ManageInventory>}
