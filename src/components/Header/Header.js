@@ -45,7 +45,7 @@ const Header = () => {
                     <CustomLink to={'/manage-inventory'}>
                       Manage Inventory
                     </CustomLink>
-                    <CustomLink to={'/blogs'}>Blogs</CustomLink>
+                    <CustomLink to={'/blogs'}>Blog</CustomLink>
                   </div>
                 </div>
               </div>
