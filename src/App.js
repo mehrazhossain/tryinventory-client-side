@@ -8,6 +8,7 @@ import ManageInventory from './components/ManageInventory/ManageInventory';
 import NotFound from './components/NotFound/NotFound';
 import OurProcedure from './components/OurProcedure/OurProcedure';
 import Product from './components/Product/Product';
+import Products from './components/Products/Products';
 import Team from './components/Team/Team';
 
 function App() {
@@ -20,7 +21,7 @@ function App() {
           element={
             <>
               <Banner></Banner>
-              <Product></Product>
+              <Products></Products>
               <OurProcedure></OurProcedure>
               <Team></Team>
             </>
