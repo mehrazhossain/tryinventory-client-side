@@ -6,7 +6,7 @@ import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
 import ManageInventory from './components/ManageInventory/ManageInventory';
 import NotFound from './components/NotFound/NotFound';
-import OurProcedure from './components/Process/OurProcedure';
+import OurProcedure from './components/OurProcedure/OurProcedure';
 import Product from './components/Product/Product';
 import Team from './components/Team/Team';
 
