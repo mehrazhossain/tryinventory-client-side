@@ -1,11 +1,15 @@
 import React from 'react';
 import './Footer.css';
 
+// get full dynamic year
+const today = new Date();
+const year = today.getFullYear();
+
 const Footer = () => {
   return (
     <div className="relative mt-16 bg-deep-purple-accent-400">
       <svg
-        className="absolute top-0 w-full h-6 -mt-5 sm:-mt-10 sm:h-16 text-deep-purple-accent-400"
+        className="absolute top-0 w-full h-6 -mt-5 sm:-mt-10 sm:h-16 text-violet-600"
         preserveAspectRatio="none"
         viewBox="0 0 1440 54"
       >
@@ -44,12 +48,15 @@ const Footer = () => {
             </a>
             <div className="mt-4 lg:max-w-sm">
               <p className="text-sm text-deep-purple-50">
-                Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                accusantium doloremque laudantium, totam rem aperiam.
+                <b>'TryInventory'</b> has been providing technology solutions to
+                solve specific business problems. We specialize in providing
+                customized solutions to our customers based on their specific
+                business needs.
               </p>
               <p className="mt-4 text-sm text-deep-purple-50">
-                Eaque ipsa quae ab illo inventore veritatis et quasi architecto
-                beatae vitae dicta sunt explicabo.
+                We have specialized team having expertise in Web Applications
+                development and Inventory Management Software. We help you boost
+                your business through our Inventory Management Software.
               </p>
             </div>
           </div>
@@ -64,7 +71,7 @@ const Footer = () => {
                     href="/"
                     className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"
                   >
-                    News
+                    About TryInventory
                   </a>
                 </li>
                 <li>
@@ -72,7 +79,7 @@ const Footer = () => {
                     href="/"
                     className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"
                   >
-                    World
+                    Our Services
                   </a>
                 </li>
                 <li>
@@ -80,7 +87,7 @@ const Footer = () => {
                     href="/"
                     className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"
                   >
-                    Games
+                    Our Valuable Partner
                   </a>
                 </li>
                 <li>
@@ -88,14 +95,14 @@ const Footer = () => {
                     href="/"
                     className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"
                   >
-                    References
+                    Contact
                   </a>
                 </li>
               </ul>
             </div>
             <div>
               <p className="font-semibold tracking-wide text-teal-accent-400">
-                Cherry
+                Our Core Values
               </p>
               <ul className="mt-2 space-y-2">
                 <li>
@@ -103,7 +110,7 @@ const Footer = () => {
                     href="/"
                     className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"
                   >
-                    Web
+                    Excellence
                   </a>
                 </li>
                 <li>
@@ -111,7 +118,7 @@ const Footer = () => {
                     href="/"
                     className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"
                   >
-                    eCommerce
+                    Strong relationships
                   </a>
                 </li>
                 <li>
@@ -119,7 +126,7 @@ const Footer = () => {
                     href="/"
                     className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"
                   >
-                    Business
+                    Innovation & Creativity
                   </a>
                 </li>
                 <li>
@@ -127,7 +134,7 @@ const Footer = () => {
                     href="/"
                     className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"
                   >
-                    Entertainment
+                    Team
                   </a>
                 </li>
                 <li>
@@ -135,14 +142,14 @@ const Footer = () => {
                     href="/"
                     className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"
                   >
-                    Portfolio
+                    Accountability
                   </a>
                 </li>
               </ul>
             </div>
             <div>
               <p className="font-semibold tracking-wide text-teal-accent-400">
-                Apples
+                Others Services
               </p>
               <ul className="mt-2 space-y-2">
                 <li>
@@ -150,7 +157,7 @@ const Footer = () => {
                     href="/"
                     className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"
                   >
-                    Media
+                    Web design & development
                   </a>
                 </li>
                 <li>
@@ -158,7 +165,7 @@ const Footer = () => {
                     href="/"
                     className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"
                   >
-                    Brochure
+                    Software Development
                   </a>
                 </li>
                 <li>
@@ -166,7 +173,7 @@ const Footer = () => {
                     href="/"
                     className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"
                   >
-                    Nonprofit
+                    Database Design
                   </a>
                 </li>
                 <li>
@@ -174,7 +181,7 @@ const Footer = () => {
                     href="/"
                     className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"
                   >
-                    Educational
+                    ICT Support
                   </a>
                 </li>
                 <li>
@@ -182,14 +189,14 @@ const Footer = () => {
                     href="/"
                     className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"
                   >
-                    Projects
+                    ICT Training
                   </a>
                 </li>
               </ul>
             </div>
             <div>
               <p className="font-semibold tracking-wide text-teal-accent-400">
-                Business
+                Try Inventory Career
               </p>
               <ul className="mt-2 space-y-2">
                 <li>
@@ -197,7 +204,7 @@ const Footer = () => {
                     href="/"
                     className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"
                   >
-                    Infopreneur
+                    Career with us
                   </a>
                 </li>
                 <li>
@@ -205,7 +212,7 @@ const Footer = () => {
                     href="/"
                     className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"
                   >
-                    Personal
+                    Job Vacancies
                   </a>
                 </li>
                 <li>
@@ -213,7 +220,7 @@ const Footer = () => {
                     href="/"
                     className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"
                   >
-                    Wiki
+                    Read Career Instruction
                   </a>
                 </li>
                 <li>
@@ -221,7 +228,7 @@ const Footer = () => {
                     href="/"
                     className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"
                   >
-                    Forum
+                    Read Our Blog
                   </a>
                 </li>
               </ul>
@@ -229,8 +236,8 @@ const Footer = () => {
           </div>
         </div>
         <div className="flex flex-col justify-between pt-5 pb-10 border-t border-deep-purple-accent-200 sm:flex-row">
-          <p className="text-sm text-gray-100">
-            © Copyright 2020 Lorem Inc. All rights reserved.
+          <p className="text-sm text-gray-500">
+            © Copyright {year} TryInventory. All rights reserved.
           </p>
           <div className="flex items-center mt-4 space-x-4 sm:mt-0">
             <a
