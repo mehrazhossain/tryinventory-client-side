@@ -6,7 +6,7 @@ import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
 import ManageInventory from './components/ManageInventory/ManageInventory';
 import NotFound from './components/NotFound/NotFound';
-import Process from './components/Process/Process';
+import OurProcedure from './components/Process/OurProcedure';
 import Product from './components/Product/Product';
 import Team from './components/Team/Team';
 
@@ -21,7 +21,7 @@ function App() {
             <>
               <Banner></Banner>
               <Product></Product>
-              <Process></Process>
+              <OurProcedure></OurProcedure>
               <Team></Team>
             </>
           }
