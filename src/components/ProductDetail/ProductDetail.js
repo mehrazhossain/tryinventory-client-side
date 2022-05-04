@@ -51,8 +51,8 @@ const ProductDetail = () => {
           </div>
         </div>
         <div>
-          <div>
-            <h2 class="text-xl text-center pb-4 title-font text-gray-800">
+          <div className="pb-8 pt-8">
+            <h2 class="text-xl text-center title-font text-gray-800">
               <u className="underline-offset-8 decoration-violet-600">
                 Restock the Item
               </u>

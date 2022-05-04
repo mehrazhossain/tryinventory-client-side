@@ -10,6 +10,7 @@ import OurProcedure from './components/OurProcedure/OurProcedure';
 import Product from './components/Product/Product';
 import ProductDetail from './components/ProductDetail/ProductDetail';
 import Products from './components/Products/Products';
+import SignUp from './components/SignUp/SignUp';
 import Team from './components/Team/Team';
 
 function App() {
@@ -37,6 +38,7 @@ function App() {
           path="/product/:id"
           element={<ProductDetail></ProductDetail>}
         ></Route>
+        <Route path="/signup" element={<SignUp></SignUp>}></Route>
         <Route path="*" element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer></Footer>
