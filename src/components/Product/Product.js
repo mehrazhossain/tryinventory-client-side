@@ -1,11 +1,12 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Product = ({ photo }) => {
   const { id, title, url } = photo;
   return (
     <div>
-      <a
-        href="/"
+      <Link
+        to={`/product/${id}`}
         aria-label="View Item"
         className="inline-block overflow-hidden duration-300 transform bg-white rounded shadow-sm hover:-translate-y-2"
       >
@@ -21,7 +22,7 @@ const Product = ({ photo }) => {
             </div>
           </div>
         </div>
-      </a>
+      </Link>
     </div>
   );
 };

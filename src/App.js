@@ -1,4 +1,4 @@
-import { Route, Routes } from 'react-router-dom';
+import { Route, Router, Routes } from 'react-router-dom';
 import './App.css';
 import Banner from './components/Banner/Banner';
 import Blogs from './components/Blogs/Blogs';
@@ -8,6 +8,7 @@ import ManageInventory from './components/ManageInventory/ManageInventory';
 import NotFound from './components/NotFound/NotFound';
 import OurProcedure from './components/OurProcedure/OurProcedure';
 import Product from './components/Product/Product';
+import ProductDetail from './components/ProductDetail/ProductDetail';
 import Products from './components/Products/Products';
 import Team from './components/Team/Team';
 
@@ -32,6 +33,10 @@ function App() {
           element={<ManageInventory> </ManageInventory>}
         ></Route>
         <Route path="/blogs" element={<Blogs> </Blogs>}></Route>
+        <Route
+          path="/product/:id"
+          element={<ProductDetail></ProductDetail>}
+        ></Route>
         <Route path="*" element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer></Footer>
