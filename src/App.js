@@ -4,6 +4,7 @@ import Banner from './components/Banner/Banner';
 import Blogs from './components/Blogs/Blogs';
 import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
+import Login from './components/Login/Login';
 import ManageInventory from './components/ManageInventory/ManageInventory';
 import NotFound from './components/NotFound/NotFound';
 import OurProcedure from './components/OurProcedure/OurProcedure';
@@ -39,6 +40,7 @@ function App() {
           element={<ProductDetail></ProductDetail>}
         ></Route>
         <Route path="/signup" element={<SignUp></SignUp>}></Route>
+        <Route path="/login" element={<Login></Login>}></Route>
         <Route path="*" element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer></Footer>
