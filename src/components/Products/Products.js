@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import useProducts from '../../hooks/useProducts/useProducts';
+import useProducts from '../../hooks/useProducts';
 import Product from '../Product/Product';
 
 const Products = () => {
