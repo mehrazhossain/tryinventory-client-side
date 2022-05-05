@@ -5,6 +5,7 @@ import Blogs from './components/Blogs/Blogs';
 import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
 import Login from './components/Login/Login';
+import AddNewItem from './components/ManageInventory/AddNewItem';
 import ManageInventory from './components/ManageInventory/ManageInventory';
 import NotFound from './components/NotFound/NotFound';
 import OurProcedure from './components/OurProcedure/OurProcedure';
@@ -40,6 +41,14 @@ function App() {
           element={
             <RequireAuth>
               <ProductDetail></ProductDetail>
+            </RequireAuth>
+          }
+        ></Route>
+        <Route
+          path="/manage-inventory/add-new-item"
+          element={
+            <RequireAuth>
+              <AddNewItem></AddNewItem>
             </RequireAuth>
           }
         ></Route>
