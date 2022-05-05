@@ -1,5 +1,5 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import useProductDetails from '../../hooks/useProductDetails';
 
 const ProductDetail = () => {
@@ -8,6 +8,14 @@ const ProductDetail = () => {
   return (
     <div>
       <section className="text-gray-700 body-font overflow-hidden bg-white">
+        <div className="text-right mt-8 mr-32">
+          <Link
+            to="/manage-inventory"
+            className="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow hover:bg-violet-600 hover:text-white"
+          >
+            Manage Inventories
+          </Link>
+        </div>
         <div className="container px-5 py-8 mx-auto">
           <div>
             <h2 className="text-5xl text-center pb-8 title-font text-gray-700">
