@@ -10,6 +10,7 @@ import NotFound from './components/NotFound/NotFound';
 import OurProcedure from './components/OurProcedure/OurProcedure';
 import ProductDetail from './components/ProductDetail/ProductDetail';
 import Products from './components/Products/Products';
+import RequireAuth from './components/RequireAuth/RequireAuth';
 import SignUp from './components/SignUp/SignUp';
 import Team from './components/Team/Team';
 
@@ -36,7 +37,11 @@ function App() {
         <Route path="/blogs" element={<Blogs> </Blogs>}></Route>
         <Route
           path="/product/:id"
-          element={<ProductDetail></ProductDetail>}
+          element={
+            <RequireAuth>
+              <ProductDetail></ProductDetail>
+            </RequireAuth>
+          }
         ></Route>
         <Route path="/signup" element={<SignUp></SignUp>}></Route>
         <Route path="/login" element={<Login></Login>}></Route>
