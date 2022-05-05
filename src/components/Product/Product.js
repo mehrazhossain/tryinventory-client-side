@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Product = ({ photo }) => {
-  const { id, title, url } = photo;
+const Product = ({ product }) => {
+  const { id, title, url } = product;
   return (
     <div>
       <Link

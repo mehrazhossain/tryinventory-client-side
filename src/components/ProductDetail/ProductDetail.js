@@ -1,6 +1,10 @@
 import React from 'react';
+import { useParams } from 'react-router-dom';
+import useProductDetails from '../../hooks/useProducts/useProductDetails';
 
 const ProductDetail = () => {
+  const { id } = useParams();
+  const [productDetails] = useProductDetails(id);
   return (
     <div>
       <section class="text-gray-700 body-font overflow-hidden bg-white">
@@ -14,11 +18,11 @@ const ProductDetail = () => {
             <img
               alt="ecommerce"
               class="lg:w-1/2 w-full object-cover object-center rounded border border-gray-200"
-              src="https://www.whitmorerarebooks.com/pictures/medium/2465.jpg"
+              src={productDetails.url}
             />
             <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
               <h1 class="text-gray-900 text-3xl title-font font-medium mb-1">
-                The Catcher in the Rye
+                {productDetails.title}
               </h1>
               <div class="flex mb-4"></div>
               <p class="leading-relaxed">
@@ -32,7 +36,7 @@ const ProductDetail = () => {
               <div class="flex mt-6 items-center pb-5 border-b-2 border-gray-200 mb-5">
                 <div>
                   <p className="py-1 font-medium text-gray-500">Product ID</p>
-                  <p className="py-1">12649426</p>
+                  <p className="py-1">{productDetails.id}</p>
                   <p className="py-1 font-medium text-gray-500">Quantity</p>
                   <p className="py-1">100</p>
                   <p className="py-1 font-medium text-gray-500">Supplier</p>

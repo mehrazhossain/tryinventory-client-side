@@ -1,15 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
+import useProducts from '../../hooks/useProducts/useProducts';
 import Product from '../Product/Product';
 
 const Products = () => {
-  const [photos, setPhotos] = useState([]);
+  // using custom hooks
+  const [products] = useProducts([]);
 
-  useEffect(() => {
-    fetch('https://jsonplaceholder.typicode.com/photos')
-      .then((res) => res.json())
-      .then((data) => setPhotos(data));
-  }, []);
   return (
     <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
       <div className="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
@@ -18,8 +15,8 @@ const Products = () => {
         </h2>
       </div>
       <div className="grid gap-5 row-gap-5 mb-8 lg:grid-cols-4 sm:grid-cols-2">
-        {photos.slice(0, 6).map((photo) => (
-          <Product key={photos.id} photo={photo}></Product>
+        {products.slice(0, 6).map((product) => (
+          <Product key={products.id} product={product}></Product>
         ))}
       </div>
       <div className="text-center">

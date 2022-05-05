@@ -1,4 +1,4 @@
-import { Route, Router, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import Banner from './components/Banner/Banner';
 import Blogs from './components/Blogs/Blogs';
@@ -8,7 +8,6 @@ import Login from './components/Login/Login';
 import ManageInventory from './components/ManageInventory/ManageInventory';
 import NotFound from './components/NotFound/NotFound';
 import OurProcedure from './components/OurProcedure/OurProcedure';
-import Product from './components/Product/Product';
 import ProductDetail from './components/ProductDetail/ProductDetail';
 import Products from './components/Products/Products';
 import SignUp from './components/SignUp/SignUp';
