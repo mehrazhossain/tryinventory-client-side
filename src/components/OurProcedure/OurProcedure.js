@@ -9,7 +9,7 @@ const OurProcedure = () => {
             <svg
               viewBox="0 0 52 24"
               fill="currentColor"
-              className="absolute top-0 left-0 z-0 hidden w-32 -mt-8 -ml-20 text-blue-gray-100 lg:w-32 lg:-ml-28 lg:-mt-10 sm:block"
+              className="absolute top-0 left-0 z-0 hidden w-32 -mt-8 -ml-20 text-violet-700 lg:w-32 lg:-ml-28 lg:-mt-10 sm:block"
             >
               <defs>
                 <pattern
@@ -28,10 +28,12 @@ const OurProcedure = () => {
                 height="24"
               />
             </svg>
-            <span className="relative text-5xl">Our</span>
+            <span className="relative text-4xl text-gray-700">Our</span>
           </span>{' '}
-          <span className="text-violet-600">
-            <u className="underline-offset-8 text-5xl">Procedure</u>
+          <span>
+            <u className="underline-offset-8 text-4xl decoration-violet-600  text-gray-700">
+              Procedure
+            </u>
           </span>
         </h2>
         <p className="text-base text-gray-700 md:text-lg">

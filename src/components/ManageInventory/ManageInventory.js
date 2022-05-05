@@ -7,6 +7,7 @@ import useProducts from '../../hooks/useProducts';
 const ManageInventory = () => {
   const [products] = useProducts([]);
   const [user] = useAuthState(auth);
+
   return (
     <div>
       {user ? (
@@ -15,7 +16,7 @@ const ManageInventory = () => {
             to="/manage-inventory/add-new-item"
             className="bg-violet-600 text-white py-2 px-3 rounded shadow hover:bg-violet-700"
           >
-            Add new item
+            Add item
           </Link>
         </div>
       ) : (
@@ -75,6 +76,10 @@ const ManageInventory = () => {
                     >
                       Action
                     </th>
+                    <th
+                      scope="col"
+                      className="px-5 py-3 bg-white  border-b border-gray-200 text-gray-800  text-left text-sm uppercase font-normal"
+                    ></th>
                   </tr>
                 </thead>
                 <tbody>
@@ -150,6 +155,28 @@ const ManageInventory = () => {
                               </svg>
                             </span>
                           </span>
+                        </td>
+                        <td>
+                          <Link
+                            to={`/product/update/${product.id}`}
+                            className="text-green-800"
+                          >
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="20"
+                              height="20"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              class="feather feather-edit"
+                            >
+                              <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+                              <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+                            </svg>
+                          </Link>
                         </td>
                       </tr>
                     );

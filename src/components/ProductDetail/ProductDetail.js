@@ -11,7 +11,7 @@ const ProductDetail = () => {
         <div className="text-right mt-8 mr-32">
           <Link
             to="/manage-inventory"
-            className="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow hover:bg-violet-600 hover:text-white"
+            className="bg-white hover:bg-gray-100 text-gray-800 py-2 px-4 border border-gray-400 rounded shadow hover:bg-violet-600 hover:text-white"
           >
             Manage Inventories
           </Link>

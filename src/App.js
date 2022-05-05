@@ -14,6 +14,7 @@ import Products from './components/Products/Products';
 import RequireAuth from './components/RequireAuth/RequireAuth';
 import SignUp from './components/SignUp/SignUp';
 import Team from './components/Team/Team';
+import UpdateItem from './components/UpdateItem/UpdateItem';
 
 function App() {
   return (
@@ -49,6 +50,14 @@ function App() {
           element={
             <RequireAuth>
               <AddNewItem></AddNewItem>
+            </RequireAuth>
+          }
+        ></Route>
+        <Route
+          path="/product/update/:id"
+          element={
+            <RequireAuth>
+              <UpdateItem></UpdateItem>
             </RequireAuth>
           }
         ></Route>
