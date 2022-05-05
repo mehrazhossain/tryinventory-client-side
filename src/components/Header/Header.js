@@ -1,15 +1,22 @@
 import React from 'react';
-import { Fragment } from 'react';
-import { Disclosure, Menu, Transition } from '@headlessui/react';
+import { Disclosure } from '@headlessui/react';
 import { MenuIcon, XIcon } from '@heroicons/react/outline';
 import CustomLink from '../CustomLink/CustomLink';
 import { Link } from 'react-router-dom';
+import { signOut } from 'firebase/auth';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from '../../firebase.init';
 
-function classNames(...classes) {
-  return classes.filter(Boolean).join(' ');
-}
+// function classNames(...classes) {
+//   return classes.filter(Boolean).join(' ');
+// }
 
 const Header = () => {
+  const [user, loading, error] = useAuthState(auth);
+
+  const handleSignOut = () => {
+    signOut(auth);
+  };
   return (
     <Disclosure as="nav" className="bg-gray-800">
       {({ open }) => (
@@ -51,9 +58,21 @@ const Header = () => {
                 </div>
               </div>
               <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-                <Link className="text-white" to={'/signup'}>
-                  Get Started
-                </Link>
+                {user ? (
+                  <button
+                    onClick={handleSignOut}
+                    className="text-gray-200 font-semibold"
+                  >
+                    Sign out
+                  </button>
+                ) : (
+                  <Link
+                    className="text-white inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md md:w-auto bg-purple-600 hover:bg-purple-700 focus:shadow-outline focus:outline-none"
+                    to={'/signup'}
+                  >
+                    Get Started
+                  </Link>
+                )}
               </div>
             </div>
           </div>

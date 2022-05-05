@@ -16,7 +16,7 @@ const Products = () => {
       </div>
       <div className="grid gap-5 row-gap-5 mb-8 lg:grid-cols-4 sm:grid-cols-2">
         {products.slice(0, 6).map((product) => (
-          <Product key={products.id} product={product}></Product>
+          <Product key={product.id} product={product}></Product>
         ))}
       </div>
       <div className="text-center">
