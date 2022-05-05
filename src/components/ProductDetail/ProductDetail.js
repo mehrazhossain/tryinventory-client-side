@@ -67,7 +67,7 @@ const ProductDetail = () => {
               class="rounded-l-lg p-4 border-t mr-0 border-b border-l text-gray-800 border-gray-200 bg-white"
               placeholder="Add quantity"
             />
-            <button class="px-8 rounded-r-lg bg-violet-600  text-white font-bold p-4 uppercase border-violet-500 border-t border-b border-r">
+            <button class="px-8 rounded-r-lg bg-violet-600  text-white font-bold p-4 uppercase border-violet-500 border-t border-b border-r hover:bg-violet-700">
               Restock
             </button>
           </form>
