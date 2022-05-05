@@ -1,25 +1,32 @@
 import React from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link } from 'react-router-dom';
+import auth from '../../firebase.init';
 import useProducts from '../../hooks/useProducts';
 
 const ManageInventory = () => {
   const [products] = useProducts([]);
+  const [user] = useAuthState(auth);
   return (
     <div>
-      <div className="text-right mt-8 mr-8">
-        <Link
-          to="/manage-inventory/add-new-item"
-          className="bg-violet-600 text-white py-2 px-3 rounded shadow hover:bg-violet-700"
-        >
-          Add new item
-        </Link>
-      </div>
+      {user ? (
+        <div className="text-right mt-8 mr-8">
+          <Link
+            to="/manage-inventory/add-new-item"
+            className="bg-violet-600 text-white py-2 px-3 rounded shadow hover:bg-violet-700"
+          >
+            Add new item
+          </Link>
+        </div>
+      ) : (
+        ''
+      )}
       <div className="mt-8">
         <h2 className="text-3xl text-center title-font text-gray-700">
           Inventory Items
         </h2>
       </div>
-      <div className="container mx-auto px-4 sm:px-8 max-w-3xl">
+      <div className="container mx-auto px-4 sm:px-8 max-w-6xl">
         <div>
           <div className="-mx-4 sm:-mx-8 px-4 sm:px-8 py-4 overflow-x-auto">
             <div className="inline-block min-w-full shadow rounded-lg overflow-hidden">
@@ -37,6 +44,12 @@ const ManageInventory = () => {
                       className="px-5 py-3 bg-white  border-b border-gray-200 text-gray-800  text-left text-sm uppercase font-normal"
                     >
                       Supplier
+                    </th>
+                    <th
+                      scope="col"
+                      className="px-5 py-3 bg-white  border-b border-gray-200 text-gray-800  text-left text-sm uppercase font-normal"
+                    >
+                      Creator
                     </th>
                     <th
                       scope="col"
@@ -87,6 +100,11 @@ const ManageInventory = () => {
                         <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
                           <p className="text-gray-900 whitespace-no-wrap">
                             Example Supplier
+                          </p>
+                        </td>
+                        <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                          <p className="text-gray-900 whitespace-no-wrap">
+                            mehraz@dev.com
                           </p>
                         </td>
                         <td className="text-center px-5 py-5 border-b border-gray-200 bg-white text-sm">

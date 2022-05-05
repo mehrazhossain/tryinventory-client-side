@@ -1,6 +1,7 @@
 import React from 'react';
 
 const AddNewItem = () => {
+  // TODO ! creator er mail submit korar somoy pathay dibo
   return (
     <div>
       <div className="relative min-h-screen flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8 relative items-center">
