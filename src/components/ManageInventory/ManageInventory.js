@@ -83,7 +83,7 @@ const ManageInventory = () => {
                   </tr>
                 </thead>
                 <tbody>
-                  {products.slice(0, 5).map((product) => {
+                  {products.map((product) => {
                     return (
                       <tr>
                         <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
@@ -91,42 +91,54 @@ const ManageInventory = () => {
                             <div className="flex-shrink-0">
                               <img
                                 alt=""
-                                src={product.url}
+                                src={product.image}
                                 className="mx-auto object-cover rounded h-10 w-10 "
                               />
                             </div>
                             <div className="ml-3">
                               <p className="text-gray-900 whitespace-no-wrap">
-                                {product.title}
+                                {product.name}
                               </p>
                             </div>
                           </div>
                         </td>
                         <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
                           <p className="text-gray-900 whitespace-no-wrap">
-                            Example Supplier
+                            {product.supplier}
                           </p>
                         </td>
                         <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
                           <p className="text-gray-900 whitespace-no-wrap">
-                            mehraz@dev.com
+                            {product.email}
                           </p>
                         </td>
                         <td className="text-center px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                          <p className="text-gray-900 whitespace-no-wrap">90</p>
+                          <p className="text-gray-900 whitespace-no-wrap">
+                            {product.quantity}
+                          </p>
                         </td>
                         <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                          <span className="relative inline-block px-3 py-1 font-semibold text-green-900 leading-tight">
-                            <span
-                              aria-hidden="true"
-                              className="absolute inset-0 bg-green-200 opacity-50 rounded-full"
-                            ></span>
-                            <span className="relative">active</span>
-                          </span>
+                          {product.quantity > 0 ? (
+                            <span className="relative inline-block px-3 py-1 font-semibold text-green-900 leading-tight">
+                              <span
+                                aria-hidden="true"
+                                className="absolute inset-0 bg-green-200 opacity-50 rounded-full"
+                              ></span>
+                              <span className="relative">active</span>
+                            </span>
+                          ) : (
+                            <span className="relative inline-block px-3 py-1 font-semibold text-red-600 leading-tight">
+                              <span
+                                aria-hidden="true"
+                                className="absolute inset-0 bg-red-200 opacity-50 rounded-full"
+                              ></span>
+                              <span className="relative">inactive</span>
+                            </span>
+                          )}
                         </td>
                         <td className="text-center px-5 py-5 border-b border-gray-200 bg-white text-sm">
                           <p className="text-gray-900 whitespace-no-wrap">
-                            $100
+                            ${product.price}
                           </p>
                         </td>
                         <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
