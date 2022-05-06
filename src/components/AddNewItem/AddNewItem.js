@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import toast from 'react-hot-toast';
 import auth from '../../firebase.init';
@@ -12,10 +12,8 @@ const AddNewItem = () => {
   const [quantity, setQuantity] = useState('');
   const [description, setDescription] = useState('');
 
-  // TODO ! creator er mail submit korar somoy pathay dibo
   const [user] = useAuthState(auth);
   const { email } = user;
-  console.log(email);
 
   // get all input data using onblur
   const handleProductBlur = (e) => {
@@ -40,15 +38,6 @@ const AddNewItem = () => {
   // handle form submit
   const handleFormSubmit = (e) => {
     e.preventDefault();
-    console.log(
-      name,
-      supplier,
-      image,
-      price,
-      quantity,
-      description,
-      user.email
-    );
     // send data to the server
     fetch('http://localhost:5000/manage-inventory/add-new-item', {
       method: 'POST',
@@ -64,11 +53,8 @@ const AddNewItem = () => {
         description,
         email,
       }),
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        console.log('success', data);
-      });
+    }).then((res) => res.json());
+    toast.success('Successfully Inserted');
   };
   return (
     <div>

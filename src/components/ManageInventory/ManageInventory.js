@@ -5,8 +5,26 @@ import auth from '../../firebase.init';
 import useProducts from '../../hooks/useProducts';
 
 const ManageInventory = () => {
-  const [products] = useProducts([]);
+  const [products, setProducts] = useProducts([]);
   const [user] = useAuthState(auth);
+
+  const handleDelete = (id) => {
+    const proceed = window.confirm('Are you sure you want to delete?');
+    if (proceed) {
+      console.log('deleting product with id', id);
+      const url = `http://localhost:5000/product/${id}`;
+      fetch(url, {
+        method: 'DELETE',
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          if (data.deletedCount > 0) {
+            const remaining = products.filter((product) => product._id !== id);
+            setProducts(remaining);
+          }
+        });
+    }
+  };
 
   return (
     <div>
@@ -85,7 +103,7 @@ const ManageInventory = () => {
                 <tbody>
                   {products.map((product) => {
                     return (
-                      <tr>
+                      <tr key={product._id}>
                         <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
                           <div className="flex items-center">
                             <div className="flex-shrink-0">
@@ -149,6 +167,7 @@ const ManageInventory = () => {
                             ></span>
                             <span className="relative">
                               <svg
+                                onClick={() => handleDelete(product._id)}
                                 xmlns="http://www.w3.org/2000/svg"
                                 width="20"
                                 height="20"
@@ -158,7 +177,7 @@ const ManageInventory = () => {
                                 strokeWidth="2"
                                 strokeLinecap="round"
                                 strokeLinejoin="round"
-                                className="feather feather-trash-2"
+                                className="cursor-pointer feather feather-trash-2"
                               >
                                 <polyline points="3 6 5 6 21 6"></polyline>
                                 <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
@@ -170,7 +189,7 @@ const ManageInventory = () => {
                         </td>
                         <td>
                           <Link
-                            to={`/product/update/${product.id}`}
+                            to={`/product/update/${product._id}`}
                             className="text-green-800"
                           >
                             <svg
@@ -180,10 +199,10 @@ const ManageInventory = () => {
                               viewBox="0 0 24 24"
                               fill="none"
                               stroke="currentColor"
-                              stroke-width="2"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              class="feather feather-edit"
+                              strokeWidth="2"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              className="feather feather-edit"
                             >
                               <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
                               <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>

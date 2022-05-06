@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react';
 
 const useProductDetails = (productId) => {
   const [productDetails, setProductDetails] = useState([]);
-  console.log(productDetails);
 
   useEffect(() => {
     const url = `http://localhost:5000/product/${productId}`;
