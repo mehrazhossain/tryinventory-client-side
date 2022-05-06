@@ -11,7 +11,6 @@ const ManageInventory = () => {
   const handleDelete = (id) => {
     const proceed = window.confirm('Are you sure you want to delete?');
     if (proceed) {
-      console.log('deleting product with id', id);
       const url = `http://localhost:5000/product/${id}`;
       fetch(url, {
         method: 'DELETE',

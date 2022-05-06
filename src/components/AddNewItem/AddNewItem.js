@@ -58,12 +58,12 @@ const AddNewItem = () => {
   };
   return (
     <div>
-      <div className="relative min-h-screen flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8 relative items-center">
+      <div className="relative flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8 relative items-center">
         <div className="max-w-md w-full space-y-8 p-10 bg-white rounded-xl shadow-2xl z-10">
           <div className="grid  gap-8 grid-cols-1">
             <div className="flex flex-col ">
               <div className="flex flex-col sm:flex-row items-center">
-                <h2 className="font-semibold text-lg mr-auto">
+                <h2 className="font-semibold text-gray-700 text-lg mr-auto">
                   Create new product
                 </h2>
                 <div className="w-full sm:w-auto sm:ml-auto mt-3 sm:mt-0"></div>
