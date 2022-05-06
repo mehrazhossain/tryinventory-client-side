@@ -2,9 +2,10 @@ import { useState, useEffect } from 'react';
 
 const useProductDetails = (productId) => {
   const [productDetails, setProductDetails] = useState([]);
+  console.log(productDetails);
 
   useEffect(() => {
-    const url = `https://jsonplaceholder.typicode.com/photos/${productId}`;
+    const url = `http://localhost:5000/product/${productId}`;
     fetch(url)
       .then((res) => res.json())
       .then((data) => setProductDetails(data));

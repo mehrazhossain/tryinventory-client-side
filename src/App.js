@@ -15,10 +15,12 @@ import RequireAuth from './components/RequireAuth/RequireAuth';
 import SignUp from './components/SignUp/SignUp';
 import Team from './components/Team/Team';
 import UpdateItem from './components/UpdateItem/UpdateItem';
+import { Toaster } from 'react-hot-toast';
 
 function App() {
   return (
     <div>
+      <Toaster />
       <Header></Header>
       <Routes>
         <Route
