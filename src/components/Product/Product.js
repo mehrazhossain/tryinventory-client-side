@@ -3,7 +3,10 @@ import { Link } from 'react-router-dom';
 
 const Product = ({ product }) => {
   const { _id, name, image, description } = product;
-  const shortDesc = description.substring(0, 120) + ' ...';
+  const shortDesc =
+    description.length > 120
+      ? description.substring(0, 120) + ' ...'
+      : description;
   return (
     <div>
       <Link

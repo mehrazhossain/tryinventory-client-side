@@ -36,12 +36,13 @@ const UpdateItem = () => {
   };
 
   const updatedProduct = {
-    name,
-    supplier,
-    image,
-    price,
-    quantity,
-    description,
+    name: name.length === 0 ? productDetails.name : name,
+    supplier: supplier.length === 0 ? productDetails.supplier : supplier,
+    image: image.length === 0 ? productDetails.image : supplier,
+    price: price.length === 0 ? productDetails.price : price,
+    quantity: quantity.length === 0 ? productDetails.quantity : quantity,
+    description:
+      description.length === 0 ? productDetails.description : description,
   };
 
   // handle update form submit
@@ -50,7 +51,7 @@ const UpdateItem = () => {
     // send data to the server
     const url = `http://localhost:5000/product/${productDetails._id}`;
     fetch(url, {
-      method: 'PUT',
+      method: 'put',
       headers: {
         'content-type': 'application/json',
       },
@@ -82,7 +83,6 @@ const UpdateItem = () => {
                       placeholder="Product name"
                       autoComplete="off"
                       className="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded-lg h-10 px-4"
-                      required="required"
                       type="text"
                       name="product-name"
                     />
@@ -96,7 +96,6 @@ const UpdateItem = () => {
                       placeholder="Supplier name"
                       autoComplete="off"
                       className="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded-lg h-10 px-4"
-                      required="required"
                       type="text"
                       name="supplier-name"
                     />
@@ -127,7 +126,6 @@ const UpdateItem = () => {
                     </div>
                     <input
                       onBlur={handleImageUrlBlur}
-                      required="required"
                       autoComplete="off"
                       type="text"
                       className="flex-shrink flex-grow flex-auto leading-normal w-px flex-1 border border-l-0 h-10 border-grey-light rounded-lg rounded-l-none px-3 relative focus:border-blue focus:shadow"
@@ -143,7 +141,6 @@ const UpdateItem = () => {
                     <input
                       onBlur={handlePriceBlur}
                       autoComplete="off"
-                      required="required"
                       placeholder="$.."
                       className="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded-lg h-10 px-4"
                       type="number"
@@ -157,7 +154,6 @@ const UpdateItem = () => {
                     <input
                       onBlur={handleQuantityBlur}
                       autoComplete="off"
-                      required="required"
                       placeholder="Enter quantity"
                       className="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded-lg h-10 px-4"
                       type="number"
@@ -172,7 +168,6 @@ const UpdateItem = () => {
                   <textarea
                     onBlur={handleDescBlur}
                     autoComplete="off"
-                    required="required"
                     name="message"
                     className="w-full min-h-[100px] max-h-[300px] h-28 appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded-lg  py-4 px-4"
                     placeholder="Enter product info"
