@@ -13,17 +13,17 @@ const ProductDetail = () => {
       .then((data) => setItem(data));
   }, [id, item]);
 
-  const stockAfterDelivered = Number(item.quantity) - 1;
-  const updatedDocForDeliveredBtn = {
-    name: item.name,
-    supplier: item.supplier,
-    image: item.image,
-    price: item.price,
-    quantity: stockAfterDelivered,
-    description: item.description,
-  };
-
   const handleDeliveredBtn = () => {
+    const stockAfterDelivered = Number(item.quantity) - 1;
+    const updatedDocForDeliveredBtn = {
+      name: item.name,
+      supplier: item.supplier,
+      image: item.image,
+      price: item.price,
+      quantity: stockAfterDelivered,
+      description: item.description,
+      sold: item.sold + 1,
+    };
     const url = `http://localhost:5000/product/${id}`;
     fetch(url, {
       method: 'PUT',

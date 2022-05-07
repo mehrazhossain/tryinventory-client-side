@@ -170,32 +170,36 @@ const ManageInventory = () => {
                           </p>
                         </td>
                         <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                          <span className="relative inline-block px-5 py-1 font-semibold text-red-500 leading-tight">
-                            <span
-                              aria-hidden="true"
-                              className="absolute inset-0 bg-red-200 opacity-50 rounded-full"
-                            ></span>
-                            <span className="relative">
-                              <svg
-                                onClick={() => handleDelete(product._id)}
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="20"
-                                height="20"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                stroke="currentColor"
-                                strokeWidth="2"
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                className="cursor-pointer feather feather-trash-2"
-                              >
-                                <polyline points="3 6 5 6 21 6"></polyline>
-                                <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
-                                <line x1="10" y1="11" x2="10" y2="17"></line>
-                                <line x1="14" y1="11" x2="14" y2="17"></line>
-                              </svg>
+                          {user ? (
+                            <span className="relative inline-block px-5 py-1 font-semibold text-red-500 leading-tight">
+                              <span
+                                aria-hidden="true"
+                                className="absolute inset-0 bg-red-200 opacity-50 rounded-full"
+                              ></span>
+                              <span className="relative">
+                                <svg
+                                  onClick={() => handleDelete(product._id)}
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  width="20"
+                                  height="20"
+                                  viewBox="0 0 24 24"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  strokeWidth="2"
+                                  strokeLinecap="round"
+                                  strokeLinejoin="round"
+                                  className="cursor-pointer feather feather-trash-2"
+                                >
+                                  <polyline points="3 6 5 6 21 6"></polyline>
+                                  <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                                  <line x1="10" y1="11" x2="10" y2="17"></line>
+                                  <line x1="14" y1="11" x2="14" y2="17"></line>
+                                </svg>
+                              </span>
                             </span>
-                          </span>
+                          ) : (
+                            ''
+                          )}
                         </td>
                         <td>
                           <Link
