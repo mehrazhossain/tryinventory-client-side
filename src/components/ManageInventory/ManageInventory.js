@@ -79,6 +79,12 @@ const ManageInventory = () => {
                       scope="col"
                       className="px-5 py-3 bg-white  border-b border-gray-200 text-gray-800  text-left text-sm uppercase font-normal"
                     >
+                      Units Sold
+                    </th>
+                    <th
+                      scope="col"
+                      className="px-5 py-3 bg-white  border-b border-gray-200 text-gray-800  text-left text-sm uppercase font-normal"
+                    >
                       Status
                     </th>
                     <th
@@ -132,6 +138,11 @@ const ManageInventory = () => {
                         <td className="text-center px-5 py-5 border-b border-gray-200 bg-white text-sm">
                           <p className="text-gray-900 whitespace-no-wrap">
                             {product.quantity}
+                          </p>
+                        </td>
+                        <td className="text-center px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                          <p className="text-gray-900 whitespace-no-wrap">
+                            {product.sold}
                           </p>
                         </td>
                         <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">

@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
 import toast from 'react-hot-toast';
-import { useNavigate, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import useProductDetails from '../../hooks/useProductDetails';
 
 const UpdateItem = () => {
   const { id } = useParams();
   const [productDetails] = useProductDetails(id);
-  const navigate = useNavigate();
 
   const [name, setName] = useState('');
   const [supplier, setSupplier] = useState('');
@@ -58,7 +57,7 @@ const UpdateItem = () => {
       body: JSON.stringify(updatedProduct),
     }).then((res) => res.json());
     toast.success('Updated Successfully');
-    navigate('/manage-inventory');
+    e.target.reset();
   };
   return (
     <div className="relative  flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8 relative items-center">

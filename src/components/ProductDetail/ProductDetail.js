@@ -11,7 +11,7 @@ const ProductDetail = () => {
     fetch(`http://localhost:5000/product/${id}`)
       .then((res) => res.json())
       .then((data) => setItem(data));
-  }, [item]);
+  }, [id, item]);
 
   const stockAfterDelivered = Number(item.quantity) - 1;
   const updatedDocForDeliveredBtn = {
@@ -58,7 +58,7 @@ const ProductDetail = () => {
       },
       body: JSON.stringify(updatedDoc),
     }).then((res) => res.json());
-    toast.success(`Added ${updateStock} Stock Amount`);
+    toast.success(`Add ${updateStock} Stock Amount`);
   };
   return (
     <div>
@@ -80,6 +80,7 @@ const ProductDetail = () => {
           <div className="lg:w-4/5 mx-auto flex flex-wrap">
             <img
               alt="ecommerce"
+              style={{ height: '580px' }}
               className="lg:w-1/2 w-full object-cover object-center rounded border border-gray-200"
               src={item.image}
             />
@@ -95,6 +96,8 @@ const ProductDetail = () => {
                   <p className="py-1">{item._id}</p>
                   <p className="py-1 font-medium text-gray-500">Quantity</p>
                   <p className="py-1">{item.quantity}</p>
+                  <p className="py-1 font-medium text-gray-500">Units Sold</p>
+                  <p className="py-1">{item.sold}</p>
                   <p className="py-1 font-medium text-gray-500">Supplier</p>
                   <p className="py-1">{item.supplier}</p>
                 </div>
@@ -114,7 +117,7 @@ const ProductDetail = () => {
           </div>
         </div>
         <div>
-          <div className="pb-8 pt-8">
+          <div className="pb-2">
             <h2 className="text-xl text-center title-font text-gray-800">
               <u className="underline-offset-8 decoration-violet-600">
                 Restock the Item

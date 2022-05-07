@@ -52,9 +52,11 @@ const AddNewItem = () => {
         quantity,
         description,
         email,
+        sold: 0,
       }),
     }).then((res) => res.json());
-    toast.success('Successfully Inserted');
+    toast.success('Added new item');
+    e.target.reset();
   };
   return (
     <div>
