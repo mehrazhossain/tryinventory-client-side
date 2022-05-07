@@ -16,6 +16,7 @@ import SignUp from './components/SignUp/SignUp';
 import Team from './components/Team/Team';
 import UpdateItem from './components/UpdateItem/UpdateItem';
 import { Toaster } from 'react-hot-toast';
+import MyItems from './components/MyItems/MyItems';
 
 function App() {
   return (
@@ -60,6 +61,14 @@ function App() {
           element={
             <RequireAuth>
               <UpdateItem></UpdateItem>
+            </RequireAuth>
+          }
+        ></Route>
+        <Route
+          path="/user/items"
+          element={
+            <RequireAuth>
+              <MyItems></MyItems>
             </RequireAuth>
           }
         ></Route>
