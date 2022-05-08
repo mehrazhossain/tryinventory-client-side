@@ -1,3 +1,4 @@
+# Application Name: TryInventory
 # [Live Website](https://tryinventory-4d242.web.app/)
 
 ## Description
