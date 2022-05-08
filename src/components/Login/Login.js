@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import {
+  useSendPasswordResetEmail,
   useSignInWithEmailAndPassword,
   useSignInWithGoogle,
 } from 'react-firebase-hooks/auth';
+import toast from 'react-hot-toast';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 
@@ -11,6 +13,7 @@ const Login = () => {
   const [signInWithGoogle, user, error] = useSignInWithGoogle(auth);
   const [signInWithEmailAndPassword, existingUser, signInError] =
     useSignInWithEmailAndPassword(auth);
+  const [sendPasswordResetEmail] = useSendPasswordResetEmail(auth);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   let showError;
@@ -50,6 +53,12 @@ const Login = () => {
   if (signInError) {
     newError = signInError.message;
   }
+
+  // handle Forget Password
+  const handleForgetPassword = () => {
+    sendPasswordResetEmail(email);
+    toast.success('Email sent');
+  };
   return (
     <div>
       <div className="mt-12 flex flex-col items-center mb-32">
@@ -126,6 +135,12 @@ const Login = () => {
                 <line x1="15" y1="12" x2="3" y2="12"></line>
               </svg>
               <span className="ml-3">Login</span>
+            </button>
+            <button
+              onClick={handleForgetPassword}
+              className="mt-4 text-indigo-600 font-semibold"
+            >
+              Forget Password?
             </button>
             <small className="flex mt-4 text-gray-600 font-medium">
               Don't have an account?{' '}
