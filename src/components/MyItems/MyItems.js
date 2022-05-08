@@ -79,7 +79,10 @@ const MyItems = () => {
           <tbody class="bg-gray-200">
             {userItems.map((userItem) => {
               return (
-                <tr class="bg-white border-4 border-gray-200">
+                <tr
+                  key={userItem._id}
+                  class="bg-white border-4 border-gray-200"
+                >
                   <td class="px-16 py-2 flex flex-row items-center">
                     <img
                       class="h-8 w-8 rounded object-cover "

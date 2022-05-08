@@ -17,6 +17,8 @@ import Team from './components/Team/Team';
 import UpdateItem from './components/UpdateItem/UpdateItem';
 import { Toaster } from 'react-hot-toast';
 import MyItems from './components/MyItems/MyItems';
+import AddNewBlog from './components/AddNewBlog/AddNewBlog';
+import Blog from './components/Blog/Blog';
 
 function App() {
   return (
@@ -72,6 +74,11 @@ function App() {
             </RequireAuth>
           }
         ></Route>
+        <Route
+          path="/blog/add-blog"
+          element={<AddNewBlog></AddNewBlog>}
+        ></Route>
+        <Route path="/blog/:id" element={<Blog></Blog>}></Route>
         <Route path="/signup" element={<SignUp></SignUp>}></Route>
         <Route path="/login" element={<Login></Login>}></Route>
         <Route path="*" element={<NotFound></NotFound>}></Route>
