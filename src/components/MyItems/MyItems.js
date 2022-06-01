@@ -9,7 +9,9 @@ const MyItems = () => {
 
   useEffect(() => {
     const email = user.email;
-    fetch(`http://localhost:5000/user/product?email=${email}`)
+    fetch(
+      `https://tryinventory-34050.herokuapp.com/user/product?email=${email}`
+    )
       .then((res) => res.json())
       .then((data) => setUserItems(data));
   }, [user]);
@@ -17,7 +19,7 @@ const MyItems = () => {
   const handleDeleteBtn = (id) => {
     const proceed = window.confirm('Are you sure you want to delete?');
     if (proceed) {
-      const url = `http://localhost:5000/product/${id}`;
+      const url = `https://tryinventory-34050.herokuapp.com/product/${id}`;
       fetch(url, {
         method: 'DELETE',
       })

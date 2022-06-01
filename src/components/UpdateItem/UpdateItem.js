@@ -48,7 +48,7 @@ const UpdateItem = () => {
   const handleUpdateForm = (e) => {
     e.preventDefault();
     // send data to the server
-    const url = `http://localhost:5000/product/${productDetails._id}`;
+    const url = `https://tryinventory-34050.herokuapp.com/product/${productDetails._id}`;
     fetch(url, {
       method: 'put',
       headers: {

@@ -39,22 +39,25 @@ const AddNewItem = () => {
   const handleFormSubmit = (e) => {
     e.preventDefault();
     // send data to the server
-    fetch('http://localhost:5000//manage-inventory/add-new-item', {
-      method: 'POST',
-      headers: {
-        'content-type': 'application/json',
-      },
-      body: JSON.stringify({
-        name,
-        supplier,
-        image,
-        price,
-        quantity,
-        description,
-        email,
-        sold: 0,
-      }),
-    }).then((res) => res.json());
+    fetch(
+      'https://tryinventory-34050.herokuapp.com//manage-inventory/add-new-item',
+      {
+        method: 'POST',
+        headers: {
+          'content-type': 'application/json',
+        },
+        body: JSON.stringify({
+          name,
+          supplier,
+          image,
+          price,
+          quantity,
+          description,
+          email,
+          sold: 0,
+        }),
+      }
+    ).then((res) => res.json());
     toast.success('Added new item');
     e.target.reset();
   };

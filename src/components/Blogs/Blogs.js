@@ -8,7 +8,7 @@ const Blogs = () => {
   const [user] = useAuthState(auth);
 
   useEffect(() => {
-    fetch('http://localhost:5000/blog')
+    fetch('https://tryinventory-34050.herokuapp.com/blog')
       .then((res) => res.json())
       .then((data) => setBlogs(data));
   }, []);

@@ -23,7 +23,7 @@ const AddNewBlog = () => {
   const handleFormSubmit = (e) => {
     e.preventDefault();
     // send data to the server
-    fetch('http://localhost:5000/add-blog', {
+    fetch('https://tryinventory-34050.herokuapp.com/add-blog', {
       method: 'POST',
       headers: {
         'content-type': 'application/json',

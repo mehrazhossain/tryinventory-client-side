@@ -8,7 +8,7 @@ const ProductDetail = () => {
   const [updateStock, setUpdateStock] = useState(0);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/product/${id}`)
+    fetch(`https://tryinventory-34050.herokuapp.com/product/${id}`)
       .then((res) => res.json())
       .then((data) => setItem(data));
   }, [id, item]);
@@ -24,7 +24,7 @@ const ProductDetail = () => {
       description: item.description,
       sold: item.sold + 1,
     };
-    const url = `http://localhost:5000/product/${id}`;
+    const url = `https://tryinventory-34050.herokuapp.com/product/${id}`;
     fetch(url, {
       method: 'PUT',
       headers: {
@@ -50,7 +50,7 @@ const ProductDetail = () => {
   };
   const handleRestockForm = (e) => {
     e.preventDefault();
-    const url = `http://localhost:5000/product/${id}`;
+    const url = `https://tryinventory-34050.herokuapp.com/product/${id}`;
     fetch(url, {
       method: 'PUT',
       headers: {
