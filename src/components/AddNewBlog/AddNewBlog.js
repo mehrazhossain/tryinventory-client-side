@@ -23,7 +23,7 @@ const AddNewBlog = () => {
   const handleFormSubmit = (e) => {
     e.preventDefault();
     // send data to the server
-    fetch('http://localhost:5000/blog/add-blog', {
+    fetch('http://localhost:5000/add-blog', {
       method: 'POST',
       headers: {
         'content-type': 'application/json',

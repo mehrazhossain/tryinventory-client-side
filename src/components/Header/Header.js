@@ -51,16 +51,12 @@ const Header = () => {
                     src={logo}
                     alt="Workflow"
                   /> */}
-                  <span className="text-white text-xl font-medium">
-                    TryInventory
-                  </span>
+                  <span className="text-white">TryInventory</span>
                 </div>
                 <div className="hidden sm:block sm:ml-6">
                   <div className="flex space-x-4">
                     <CustomLink to={'/'}>Dashboard</CustomLink>
-                    <CustomLink to={'/manage-inventory'}>
-                      Manage Inventory
-                    </CustomLink>
+                    <CustomLink to={'/manage-inventory'}>Inventory</CustomLink>
                     <CustomLink to={'/blogs'}>Blog</CustomLink>
                   </div>
                 </div>

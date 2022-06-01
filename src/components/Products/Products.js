@@ -24,7 +24,7 @@ const Products = () => {
           to="/manage-inventory"
           className="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md md:w-auto bg-purple-600 hover:bg-purple-700 focus:shadow-outline focus:outline-none"
         >
-          Manage Inventories
+          See more
         </Link>
       </div>
     </div>

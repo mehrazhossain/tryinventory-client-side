@@ -39,7 +39,7 @@ const AddNewItem = () => {
   const handleFormSubmit = (e) => {
     e.preventDefault();
     // send data to the server
-    fetch('http://localhost:5000/manage-inventory/add-new-item', {
+    fetch('http://localhost:5000//manage-inventory/add-new-item', {
       method: 'POST',
       headers: {
         'content-type': 'application/json',

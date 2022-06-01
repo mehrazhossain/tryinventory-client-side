@@ -9,219 +9,7 @@ const year = today.getFullYear();
 const Footer = () => {
   return (
     <div className="relative mt-16 bg-deep-purple-accent-400">
-      <svg
-        className="absolute top-0 w-full h-6 -mt-5 sm:-mt-10 sm:h-16 text-violet-600"
-        preserveAspectRatio="none"
-        viewBox="0 0 1440 54"
-      >
-        <path
-          fill="currentColor"
-          d="M0 22L120 16.7C240 11 480 1.00001 720 0.700012C960 1.00001 1200 11 1320 16.7L1440 22V54H1320C1200 54 960 54 720 54C480 54 240 54 120 54H0V22Z"
-        />
-      </svg>
       <div className="px-4 pt-12 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
-        <div className="grid gap-16 row-gap-10 mb-8 lg:grid-cols-6">
-          <div className="md:max-w-md lg:col-span-2">
-            <a
-              href="/"
-              aria-label="Go home"
-              title="Company"
-              className="inline-flex items-center"
-            >
-              <img src={logo} alt="" />
-              <span className="ml-2 text-xl font-bold tracking-wide text-gray-100 uppercase">
-                Company
-              </span>
-            </a>
-            <div className="mt-4 lg:max-w-sm">
-              <p className="text-sm text-deep-purple-50">
-                <b>'TryInventory'</b> has been providing technology solutions to
-                solve specific business problems. We specialize in providing
-                customized solutions to our customers based on their specific
-                business needs.
-              </p>
-              <p className="mt-4 text-sm text-deep-purple-50">
-                We have specialized team having expertise in Web Applications
-                development and Inventory Management Software. We help you boost
-                your business through our Inventory Management Software.
-              </p>
-            </div>
-          </div>
-          <div className="grid grid-cols-2 gap-5 row-gap-8 lg:col-span-4 md:grid-cols-4">
-            <div>
-              <p className="font-semibold tracking-wide text-teal-accent-400">
-                Category
-              </p>
-              <ul className="mt-2 space-y-2">
-                <li>
-                  <a
-                    href="/"
-                    className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"
-                  >
-                    About TryInventory
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/"
-                    className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"
-                  >
-                    Our Services
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/"
-                    className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"
-                  >
-                    Our Valuable Partner
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/"
-                    className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"
-                  >
-                    Contact
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <p className="font-semibold tracking-wide text-teal-accent-400">
-                Our Core Values
-              </p>
-              <ul className="mt-2 space-y-2">
-                <li>
-                  <a
-                    href="/"
-                    className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"
-                  >
-                    Excellence
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/"
-                    className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"
-                  >
-                    Strong relationships
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/"
-                    className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"
-                  >
-                    Innovation & Creativity
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/"
-                    className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"
-                  >
-                    Team
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/"
-                    className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"
-                  >
-                    Accountability
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <p className="font-semibold tracking-wide text-teal-accent-400">
-                Others Services
-              </p>
-              <ul className="mt-2 space-y-2">
-                <li>
-                  <a
-                    href="/"
-                    className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"
-                  >
-                    Web design & development
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/"
-                    className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"
-                  >
-                    Software Development
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/"
-                    className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"
-                  >
-                    Database Design
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/"
-                    className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"
-                  >
-                    ICT Support
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/"
-                    className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"
-                  >
-                    ICT Training
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <p className="font-semibold tracking-wide text-teal-accent-400">
-                Try Inventory Career
-              </p>
-              <ul className="mt-2 space-y-2">
-                <li>
-                  <a
-                    href="/"
-                    className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"
-                  >
-                    Career with us
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/"
-                    className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"
-                  >
-                    Job Vacancies
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/"
-                    className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"
-                  >
-                    Read Career Instruction
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/"
-                    className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"
-                  >
-                    Read Our Blog
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
         <div className="flex flex-col justify-between pt-5 pb-10 border-t border-deep-purple-accent-200 sm:flex-row">
           <p className="text-sm text-gray-500">
             © Copyright {year} TryInventory. All rights reserved.
@@ -231,25 +19,230 @@ const Footer = () => {
               href="/"
               className="transition-colors duration-300 text-deep-purple-100 hover:text-teal-accent-400"
             >
-              <svg viewBox="0 0 24 24" fill="currentColor" className="h-5">
-                <path d="M24,4.6c-0.9,0.4-1.8,0.7-2.8,0.8c1-0.6,1.8-1.6,2.2-2.7c-1,0.6-2,1-3.1,1.2c-0.9-1-2.2-1.6-3.6-1.6 c-2.7,0-4.9,2.2-4.9,4.9c0,0.4,0,0.8,0.1,1.1C7.7,8.1,4.1,6.1,1.7,3.1C1.2,3.9,1,4.7,1,5.6c0,1.7,0.9,3.2,2.2,4.1 C2.4,9.7,1.6,9.5,1,9.1c0,0,0,0,0,0.1c0,2.4,1.7,4.4,3.9,4.8c-0.4,0.1-0.8,0.2-1.3,0.2c-0.3,0-0.6,0-0.9-0.1c0.6,2,2.4,3.4,4.6,3.4 c-1.7,1.3-3.8,2.1-6.1,2.1c-0.4,0-0.8,0-1.2-0.1c2.2,1.4,4.8,2.2,7.5,2.2c9.1,0,14-7.5,14-14c0-0.2,0-0.4,0-0.6 C22.5,6.4,23.3,5.5,24,4.6z" />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                version="1.1"
+                xmlnsXlink="http://www.w3.org/1999/xlink"
+                xmlnssvgjs="http://svgjs.com/svgjs"
+                width="28"
+                height="28"
+                x="0"
+                y="0"
+                viewBox="0 0 512 512"
+                style={{ enableBackground: 'new 0 0 512 512' }}
+                xmlspace="preserve"
+                class=""
+              >
+                <g>
+                  <linearGradient
+                    xmlns="http://www.w3.org/2000/svg"
+                    id="linear-gradient"
+                    gradientUnits="userSpaceOnUse"
+                    x1="126.15"
+                    x2="436.935"
+                    y1="117.834"
+                    y2="428.619"
+                  >
+                    <stop offset="0" stop-color="#1d1d1b"></stop>
+                    <stop
+                      offset=".369"
+                      stop-color="#1d1d1b"
+                      stop-opacity=".856"
+                    ></stop>
+                    <stop
+                      offset=".75"
+                      stop-color="#1d1d1b"
+                      stop-opacity=".429"
+                    ></stop>
+                    <stop
+                      offset="1"
+                      stop-color="#1d1d1b"
+                      stop-opacity="0"
+                    ></stop>
+                  </linearGradient>
+                  <circle
+                    xmlns="http://www.w3.org/2000/svg"
+                    cx="256"
+                    cy="256"
+                    fill="#03a9f4"
+                    r="250"
+                    data-original="#03a9f4"
+                    class=""
+                  ></circle>
+                  <path
+                    xmlns="http://www.w3.org/2000/svg"
+                    d="m506 256a251.274 251.274 0 0 0 -4.261-46.111l-83.37-83.371s-28.587 13.453-44.594 16.816c-12.579-13.453-30.874-21.3-51.456-21.3-45.377 0-77.534 40.333-68.606 84.082-58.313-3.364-110.913-30.27-145.213-70.629a67.452 67.452 0 0 0 -9.148 33.632c0 23.542 12.578 44.843 30.873 56.054a62.377 62.377 0 0 1 -32.017-8.968c-.214 32.676 23.759 61.615 56.029 67.265-10.234 2.008-21.7 3.649-32.016 1.121a70.339 70.339 0 0 0 66.32 47.086c-28.055 20.956-68.829 34.937-104.054 28.026l144.881 144.884a252.729 252.729 0 0 0 26.632 1.413c138.071 0 250-111.929 250-250z"
+                    fill="url(#linear-gradient)"
+                    opacity=".49"
+                    data-original="url(#linear-gradient)"
+                    class=""
+                  ></path>
+                  <path
+                    xmlns="http://www.w3.org/2000/svg"
+                    d="m373.775 143.334c-12.579-13.453-30.874-21.3-51.456-21.3-45.377 0-77.534 40.333-68.606 84.081-58.313-3.363-110.913-30.269-145.213-70.628a67.452 67.452 0 0 0 -9.148 33.632c0 23.542 12.578 44.844 30.873 56.054a62.377 62.377 0 0 1 -32.017-8.968c-.214 32.676 23.759 61.615 56.029 67.265-10.234 2.007-21.7 3.649-32.016 1.121a70.339 70.339 0 0 0 66.32 47.086c-28.055 20.956-68.829 34.937-104.054 28.026 68.66 42.388 162.5 40.539 227.957-7.383 52.778-38.639 79.628-99.762 79.628-164.143a171.859 171.859 0 0 0 35.447-34.753c-12.579 5.606-26.3 8.969-40.02 11.211 13.72-8.969 25.155-21.3 30.872-38.117-.003 0-28.589 13.453-44.596 16.816z"
+                    fill="#ffffff"
+                    fill-rule="evenodd"
+                    data-original="#ffffff"
+                    class=""
+                  ></path>
+                </g>
               </svg>
             </a>
             <a
               href="/"
               className="transition-colors duration-300 text-deep-purple-100 hover:text-teal-accent-400"
             >
-              <svg viewBox="0 0 30 30" fill="currentColor" className="h-6">
-                <circle cx="15" cy="15" r="4" />
-                <path d="M19.999,3h-10C6.14,3,3,6.141,3,10.001v10C3,23.86,6.141,27,10.001,27h10C23.86,27,27,23.859,27,19.999v-10   C27,6.14,23.859,3,19.999,3z M15,21c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S18.309,21,15,21z M22,9c-0.552,0-1-0.448-1-1   c0-0.552,0.448-1,1-1s1,0.448,1,1C23,8.552,22.552,9,22,9z" />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                version="1.1"
+                xmlnsxlink="http://www.w3.org/1999/xlink"
+                xmlnssvgjs="http://svgjs.com/svgjs"
+                width="28"
+                height="28"
+                x="0"
+                y="0"
+                viewBox="0 0 152 152"
+                style={{ enableBackground: 'new 0 0 512 512' }}
+                xmlspace="preserve"
+                class=""
+              >
+                <g>
+                  <linearGradient
+                    xmlns="http://www.w3.org/2000/svg"
+                    id="linearGradient"
+                    gradientUnits="userSpaceOnUse"
+                    x1="22.26"
+                    x2="129.74"
+                    y1="22.26"
+                    y2="129.74"
+                  >
+                    <stop offset="0" stop-color="#fae100"></stop>
+                    <stop offset=".15" stop-color="#fcb720"></stop>
+                    <stop offset=".3" stop-color="#ff7950"></stop>
+                    <stop offset=".5" stop-color="#ff1c74"></stop>
+                    <stop offset="1" stop-color="#6c1cd1"></stop>
+                  </linearGradient>
+                  <g
+                    xmlns="http://www.w3.org/2000/svg"
+                    id="Layer_2"
+                    data-name="Layer 2"
+                  >
+                    <g id="Circle">
+                      <g id="_03.Instagram" data-name="03.Instagram">
+                        <rect
+                          id="Background"
+                          fill="url(#linearGradient)"
+                          height="152"
+                          rx="76"
+                          width="152"
+                          data-original="url(#linearGradient)"
+                          class=""
+                        ></rect>
+                        <g fill="#fff">
+                          <path
+                            id="Shade"
+                            d="m133.2 26c-11.08 20.34-26.75 41.32-46.33 60.9s-40.56 35.22-60.87 46.3q-1.91-1.66-3.71-3.46a76 76 0 1 1 107.45-107.48q1.8 1.8 3.46 3.74z"
+                            opacity=".1"
+                            fill="#ffffff"
+                            data-original="#ffffff"
+                            class=""
+                          ></path>
+                          <g id="Icon">
+                            <path
+                              d="m94 36h-36a22 22 0 0 0 -22 22v36a22 22 0 0 0 22 22h36a22 22 0 0 0 22-22v-36a22 22 0 0 0 -22-22zm15 54.84a18.16 18.16 0 0 1 -18.16 18.16h-29.68a18.16 18.16 0 0 1 -18.16-18.16v-29.68a18.16 18.16 0 0 1 18.16-18.16h29.68a18.16 18.16 0 0 1 18.16 18.16z"
+                              fill="#000000"
+                              data-original="#000000"
+                              class=""
+                            ></path>
+                            <path
+                              d="m90.59 61.56-.19-.19-.16-.16a20.16 20.16 0 0 0 -14.24-5.88 20.52 20.52 0 0 0 -20.38 20.67 20.75 20.75 0 0 0 6 14.61 20.19 20.19 0 0 0 14.42 6 20.73 20.73 0 0 0 14.55-35.05zm-14.59 28a13.56 13.56 0 1 1 13.37-13.56 13.46 13.46 0 0 1 -13.37 13.56z"
+                              fill="#000000"
+                              data-original="#000000"
+                              class=""
+                            ></path>
+                            <path
+                              d="m102.43 54.38a4.88 4.88 0 0 1 -4.85 4.92 4.81 4.81 0 0 1 -3.42-1.43 4.93 4.93 0 0 1 3.43-8.39 4.82 4.82 0 0 1 3.09 1.12l.1.1a3.05 3.05 0 0 1 .44.44l.11.12a4.92 4.92 0 0 1 1.1 3.12z"
+                              fill="#000000"
+                              data-original="#000000"
+                              class=""
+                            ></path>
+                          </g>
+                        </g>
+                      </g>
+                    </g>
+                  </g>
+                </g>
               </svg>
             </a>
             <a
               href="/"
               className="transition-colors duration-300 text-deep-purple-100 hover:text-teal-accent-400"
             >
-              <svg viewBox="0 0 24 24" fill="currentColor" className="h-5">
-                <path d="M22,0H2C0.895,0,0,0.895,0,2v20c0,1.105,0.895,2,2,2h11v-9h-3v-4h3V8.413c0-3.1,1.893-4.788,4.659-4.788 c1.325,0,2.463,0.099,2.795,0.143v3.24l-1.918,0.001c-1.504,0-1.795,0.715-1.795,1.763V11h4.44l-1,4h-3.44v9H22c1.105,0,2-0.895,2-2 V2C24,0.895,23.105,0,22,0z" />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                version="1.1"
+                xmlnsxlink="http://www.w3.org/1999/xlink"
+                xmlnssvgjs="http://svgjs.com/svgjs"
+                width="28"
+                height="28"
+                x="0"
+                y="0"
+                viewBox="0 0 512 512"
+                style={{ enableBackground: 'new 0 0 512 512' }}
+                xmlspace="preserve"
+                class=""
+              >
+                <g>
+                  <linearGradient
+                    xmlns="http://www.w3.org/2000/svg"
+                    id="linear-gradient"
+                    gradientUnits="userSpaceOnUse"
+                    x1="186.516"
+                    x2="566.38"
+                    y1="161.751"
+                    y2="541.615"
+                  >
+                    <stop offset="0" stop-color="#1d1d1b"></stop>
+                    <stop
+                      offset=".369"
+                      stop-color="#1d1d1b"
+                      stop-opacity=".856"
+                    ></stop>
+                    <stop
+                      offset=".75"
+                      stop-color="#1d1d1b"
+                      stop-opacity=".429"
+                    ></stop>
+                    <stop
+                      offset="1"
+                      stop-color="#1d1d1b"
+                      stop-opacity="0"
+                    ></stop>
+                  </linearGradient>
+                  <circle
+                    xmlns="http://www.w3.org/2000/svg"
+                    cx="256"
+                    cy="256"
+                    fill="#1877f2"
+                    r="250"
+                    data-original="#1877f2"
+                  ></circle>
+                  <path
+                    xmlns="http://www.w3.org/2000/svg"
+                    d="m483.689 359.371a22.7 22.7 0 0 1 3.035-6.966 249.219 249.219 0 0 0 19.276-96.405c0-1.789-.03-3.57-.068-5.35l-161.921-161.921a426.8 426.8 0 0 0 -46.539-2.379c-46.054 0-77.573 28.1-77.573 79.729v44.521h-51.91v60.5l51.911 51.9v102.65l77 77a250.317 250.317 0 0 0 186.789-143.279z"
+                    fill="url(#linear-gradient)"
+                    opacity=".49"
+                    data-original="url(#linear-gradient)"
+                    class=""
+                  ></path>
+                  <path
+                    xmlns="http://www.w3.org/2000/svg"
+                    d="m282.345 425.65v-154.55h52.1l7.806-60.5h-59.906v-38.529c0-17.475 4.851-29.382 29.908-29.382h31.757v-53.961a427.147 427.147 0 0 0 -46.539-2.378c-46.054 0-77.573 28.1-77.573 79.729v44.521h-51.909v60.5h51.911v154.55z"
+                    fill="#ffffff"
+                    data-original="#ffffff"
+                    class=""
+                  ></path>
+                </g>
               </svg>
             </a>
           </div>

@@ -8,12 +8,10 @@ import Login from './components/Login/Login';
 import AddNewItem from './components/AddNewItem/AddNewItem';
 import ManageInventory from './components/ManageInventory/ManageInventory';
 import NotFound from './components/NotFound/NotFound';
-import OurProcedure from './components/OurProcedure/OurProcedure';
 import ProductDetail from './components/ProductDetail/ProductDetail';
 import Products from './components/Products/Products';
 import RequireAuth from './components/RequireAuth/RequireAuth';
 import SignUp from './components/SignUp/SignUp';
-import Team from './components/Team/Team';
 import UpdateItem from './components/UpdateItem/UpdateItem';
 import { Toaster } from 'react-hot-toast';
 import MyItems from './components/MyItems/MyItems';
@@ -32,8 +30,6 @@ function App() {
             <>
               <Banner></Banner>
               <Products></Products>
-              <OurProcedure></OurProcedure>
-              <Team></Team>
             </>
           }
         ></Route>
