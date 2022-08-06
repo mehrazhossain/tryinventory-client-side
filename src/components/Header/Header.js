@@ -7,11 +7,6 @@ import { signOut } from 'firebase/auth';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 import './Header.css';
-import logo from '../../images/logo.jpg';
-
-// function classNames(...classes) {
-//   return classes.filter(Boolean).join(' ');
-// }
 
 const Header = () => {
   const [user] = useAuthState(auth);
