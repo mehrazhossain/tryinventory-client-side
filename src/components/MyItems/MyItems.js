@@ -55,72 +55,75 @@ const MyItems = () => {
             </div>
           </div>
         )}
-        <table class="min-w-full table-auto">
-          <thead class="justify-between">
-            <tr class="bg-gray-800">
-              <th class="px-16 py-2">
-                <span class="text-gray-300"></span>
+        <table className="min-w-full table-auto">
+          <thead className="justify-between">
+            <tr className="bg-gray-800">
+              <th className="px-16 py-2">
+                <span className="text-gray-300"></span>
               </th>
-              <th class="px-16 py-2">
-                <span class="text-gray-300">Name</span>
+              <th className="px-16 py-2">
+                <span className="text-gray-300">Name</span>
               </th>
-              <th class="px-16 py-2">
-                <span class="text-gray-300">Product Info</span>
+              <th className="px-16 py-2">
+                <span className="text-gray-300">Product Info</span>
               </th>
-              <th class="px-16 py-2">
-                <span class="text-gray-300">Stock</span>
+              <th className="px-16 py-2">
+                <span className="text-gray-300">Stock</span>
               </th>
-              <th class="px-16 py-2">
-                <span class="text-gray-300">Sold</span>
+              <th className="px-16 py-2">
+                <span className="text-gray-300">Sold</span>
               </th>
-              <th class="px-16 py-2">
-                <span class="text-gray-300">Remove</span>
+              <th className="px-16 py-2">
+                <span className="text-gray-300">Remove</span>
               </th>
             </tr>
           </thead>
-          <tbody class="bg-gray-200">
+          <tbody className="bg-gray-200">
             {userItems.map((userItem) => {
               return (
                 <tr
                   key={userItem._id}
-                  class="bg-white border-4 border-gray-200"
+                  className="bg-white border-4 border-gray-200"
                 >
-                  <td class="px-16 py-2 flex flex-row items-center">
+                  <td className="px-16 py-2 flex flex-row items-center">
                     <img
-                      class="h-8 w-8 rounded object-cover "
+                      className="h-8 w-8 rounded object-cover "
                       src={userItem.image}
                       alt=""
                     />
                   </td>
                   <td>
-                    <span class="text-center ml-2 font-semibold">
+                    <span className="text-center ml-2 font-semibold">
                       {userItem.name}
                     </span>
                   </td>
-                  <td class="px-16 py-2">
-                    <Link to={`/product/${userItem._id}`} class="text-center">
+                  <td className="px-16 py-2">
+                    <Link
+                      to={`/product/${userItem._id}`}
+                      className="text-center"
+                    >
                       Detail Info
                     </Link>
                   </td>
-                  <td class="px-16 py-2">
+                  <td className="px-16 py-2">
                     {userItem.quantity > 0 ? (
                       <span>{userItem.quantity}</span>
                     ) : (
                       <span className="text-red-600 ">{userItem.quantity}</span>
                     )}
                   </td>
-                  <td class="px-16 py-2 flex justify-center">
+                  <td className="px-16 py-2 flex justify-center">
                     <span>{userItem.sold}</span>
                   </td>
 
-                  <td class="px-16 py-2">
+                  <td className="px-16 py-2">
                     <span
                       onClick={() => handleDeleteBtn(userItem._id)}
-                      class="cursor-pointer text-yellow-500 flex justify-center"
+                      className="cursor-pointer text-yellow-500 flex justify-center"
                     >
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        class="w-5 h-5"
+                        className="w-5 h-5"
                         viewBox="0 0 24 24"
                         stroke-width="1.5"
                         stroke="#2c3e50"
